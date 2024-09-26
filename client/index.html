@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | WebRTC Test</title>
+</head>
+<body>
+<!-- Test -->
+<div>
+    <input type="number" id="roomIdInput" placeholder="방 ID 입력">
+    <button id="joinRoomButton">방 입장</button>
+    <button id="leaveRoomButton">방 나가기</button>
+</div>
+<div>
+    <input id="resolutionWidth" type="number" placeholder="Width" value="1280">
+    <input id="resolutionHeight" type="number" placeholder="Height" value="720">
+    <button id="setResolutionButton">Set Resolution</button>
+</div>
+<button id="checkTracksButton">Check Track Count</button>
+<div>
+    <label for="streamIdInput">Stream ID:</label>
+    <input type="text" id="streamIdInput" placeholder="Enter Stream ID">
+</div>
+<div>
+    <label for="volumeInput">Set Volume (0.0 to 1.0):</label>
+    <input type="range" id="volumeInput" min="0" max="1" step="0.01" value="1">
+    <span id="volumeValue">1</span>
+</div>
+<div>
+    <button id="setVolumeButton">Set Volume</button>
+</div>
+<div>
+    <input type="checkbox" id="doMute" checked/>
+    <button id="setMuteButton">Set Mute</button>
+</div>
+<div>
+    <input type="checkbox" id="doTurnOn" checked/>
+    <button id="setVideoTurnOn">Set Video Turn On</button>
+</div>
+<div>
+    <button id="screenShareOn">Screen Share On</button>
+    <button id="screenShareOff">Screen Share Off</button>
+</div>
+<!--  <video id="localVideo" autoplay playsinline muted></video>-->
+<div id="video-container" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center;">
+</div>
+<!-- SimplePeer 라이브러리 추가 -->
+<script src="https://unpkg.com/simple-peer@9.11.0/simplepeer.min.js"></script>
+
+<!-- script.js 파일을 불러옵니다 -->
+<script src="script.js"></script>
+</body>
+</html>
